@@ -49,14 +49,13 @@ purgeOldInstallation() {
 
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
-  cd $TMP_FOLDER >/dev/null 2>&1
+  cd $COIN_PATH >/dev/null 2>&1
   wget -q $COIN_TGZ
-  tar -xvf $COIN_ZIP
+  tar -xvf NDS-1.0.0-x86_64-linux.tar
   cd NDS-1.0.0-x86_64-linux >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
   cd ~ >/dev/null 2>&1
-  rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
 

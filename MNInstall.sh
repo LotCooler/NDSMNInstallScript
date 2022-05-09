@@ -50,7 +50,7 @@ purgeOldInstallation() {
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd /usr/local/bin
-  wget -q https://github.com/NDScoin/nds/releases/download/NDSv1.0/NDS-1.0.0-x86_64-linux.tar
+  wget https://github.com/NDScoin/nds/releases/download/NDSv1.0/NDS-1.0.0-x86_64-linux.tar
   tar -xvf NDS-1.0.0-x86_64-linux.tar
   cd NDS-1.0.0-x86_64-linux
   chmod +x $COIN_DAEMON $COIN_CLI
